@@ -55,3 +55,15 @@ a {
 .clearfix {
   clear: both;
 }
+
+header {
+  border-bottom: 1vh solid black;
+  margin-bottom: 4vh;
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 5vh;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
