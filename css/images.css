@@ -8,7 +8,7 @@
   margin: 0 10vw;
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 600px) {
   #headShot {
     width: 15vw;
   }
