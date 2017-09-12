@@ -1,0 +1,17 @@
+#bio {
+  width:60vw;
+  margin: 0 20vw;
+}
+
+@media all and (min-width: 600px) {
+  #bio {
+    width: 65vw;
+    margin: 0;
+  }
+}
+
+@media all and (min-width: 800px) {
+  #bio {
+    width: 750vw;
+  }
+}

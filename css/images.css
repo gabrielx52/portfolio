@@ -1,0 +1,17 @@
+#headShot {
+  width:60vw;
+  margin: 0 20vw;
+}
+
+@media all and (min-width: 600px) {
+  #headShot {
+    width: 30vw;
+    margin: 0;
+  }
+}
+
+@media all and (min-width: 800px) {
+  #headShot {
+    width: 20vw;
+  }
+}
