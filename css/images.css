@@ -1,0 +1,18 @@
+#headShot {
+  width:80vw;
+  margin: 0 10vw;
+}
+
+.projectPic {
+  width:80vw;
+  margin: 0 10vw;
+}
+
+@media all and (min-width: 600px) {
+  #headShot {
+    width: 15vw;
+  }
+  .projectPic {
+    width: 15vw;
+  }
+}

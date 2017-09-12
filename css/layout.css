@@ -1,0 +1,47 @@
+nav {
+  display: block;
+}
+
+header {
+  position: relative;
+}
+
+#bio {
+  width:60vw;
+  margin: 0 20vw;
+}
+
+nav ul {
+  display: none;
+  clear: both;
+}
+
+nav:hover ul {
+  display: block;
+  clear: both;
+}
+
+nav li {
+  font-size: 1.4em;
+  margin-left: 5%;
+  margin-bottom: 1%;
+}
+
+#hamburger {
+  font-size: 2em;
+  float: right;
+  margin: 8% 4%;
+}
+
+@media all and (min-width: 600px) {
+  #bio {
+    width: 65vw;
+    margin: 0;
+  }
+}
+
+@media all and (min-width: 800px) {
+  #bio {
+    width: 75vw;
+  }
+}
