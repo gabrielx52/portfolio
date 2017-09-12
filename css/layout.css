@@ -38,6 +38,15 @@ nav li {
     width: 65vw;
     margin: 0;
   }
+  #hamburger {
+    display: none;
+  }
+  nav ul {
+    display: inline;
+  }
+  nav li {
+    float: left;
+  }
 }
 
 @media all and (min-width: 800px) {
