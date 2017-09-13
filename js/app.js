@@ -10,8 +10,8 @@ function Project(name, url, about, image) {
 
 Project.prototype.render = function() {
   var $template = $('#template').clone();
-  $template.attr('id', '');
-  $template.find('a').attr('href', this.url);
+  $template.find('h2').text(this.name);
+  $template.attr('id', '').attr('href', this.url);
   $template.find('img').attr('src', this.image);
   $template.find('p').text(this.about);
   $('#projectSection').append($template);
@@ -19,13 +19,13 @@ Project.prototype.render = function() {
 
 Project.all = [];
 
-Project.initializeTasks = function(){
-  projects.forEach(taskObj => new Project(taskObj.name, taskObj.url, taskObj.about, taskObj.image));
+Project.initializeProjects = function(){
+  projects.forEach(projObj => new Project(projObj.name, projObj.url, projObj.about, projObj.image));
   listTasks();
 }
 
 function listTasks(){
-  Project.all.forEach(task => task.render());
+  Project.all.forEach(project => project.render());
 }
 
-Project.initializeTasks();
+Project.initializeProjects();
