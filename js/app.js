@@ -14,7 +14,11 @@ Project.prototype.render = function() {
   $template.attr('id', '').attr('href', this.url);
   $template.find('img').attr('src', this.image);
   $template.find('p').text(this.about);
-  $('#projectSection').append($template);
+  $('#projectSection').prepend($template);
+};
+
+Project.prototype.toHtml = function() {
+  this.render();
 };
 
 Project.all = [];
@@ -29,3 +33,6 @@ function listTasks(){
 }
 
 Project.initializeProjects();
+
+var gnar = new Project('new','#','about', 'http://fillmurray.com/100/100');
+gnar.render();
