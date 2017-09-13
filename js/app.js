@@ -17,10 +17,6 @@ Project.prototype.render = function() {
   $('#projectSection').prepend($template);
 };
 
-Project.prototype.toHtml = function() {
-  this.render();
-};
-
 Project.all = [];
 
 Project.initializeProjects = function(){
