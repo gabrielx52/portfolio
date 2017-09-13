@@ -24,4 +24,4 @@ function Project(name, url, about, image) {
   this.render();
 }
 
-var busMaul = new Project('Busmall', 'https://github.com/gabrielx52/bus-mall', 'About busmall', '../imgs/busMall.png')
+var busMaul = new Project('Busmall', 'https://github.com/gabrielx52/bus-mall', 'About busmall', '../imgs/busMaul.png')
