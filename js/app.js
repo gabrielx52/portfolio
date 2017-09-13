@@ -5,23 +5,30 @@ function Project(name, url, about, image) {
   this.url = url;
   this.about = about;
   this.image = image;
-  this.createAppend = function(elementType, parentNode, className) {
-    var node = parentNode.appendChild(document.createElement(elementType));
-    node.className = className;
-    return node;
-  };
-  this.render = function() {
-    var anchor = document.getElementById('projectSection');
-    var div = this.createAppend('div', anchor, 'projectBlock');
-    var a = this.createAppend('a', div, 'projectLink');
-    var img = this.createAppend('img', div, 'projectPic');
-    var p = this.createAppend('p', div, 'projectAbout');
-    a.setAttribute('href', this.url);
-    a.innerText = this.name;
-    img.src = this.image;
-    p.innerText = this.about;
-  }
-  this.render();
+  Project.all.push(this);
 }
 
-var busMaul = new Project('Busmall', 'https://github.com/gabrielx52/bus-mall', 'About busmall', '../imgs/busMall.png')
+Project.prototype.render = function() {
+  var $template = $('#template').clone();
+  $template.find('h2').text(this.name);
+  $template.attr('id', '').attr('href', this.url);
+  $template.find('img').attr('src', this.image);
+  $template.find('p').text(this.about);
+  $('#projectSection').prepend($template);
+};
+
+Project.all = [];
+
+Project.initializeProjects = function(){
+  projects.forEach(projObj => new Project(projObj.name, projObj.url, projObj.about, projObj.image));
+  listProjects();
+}
+
+function listProjects(){
+  Project.all.forEach(project => project.render());
+}
+
+Project.initializeProjects();
+
+var gnar = new Project('new','#','about', 'http://fillmurray.com/100/100');
+gnar.render();

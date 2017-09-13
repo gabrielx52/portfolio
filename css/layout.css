@@ -1,9 +1,26 @@
+h1 {
+  margin: 8% 0 8% 6%;
+}
+
+h3 {
+  position: absolute;
+  left: 9.5em;
+  top: 2.8em;
+  color: #3e3a3a;
+}
+
 nav {
   display: block;
 }
 
 header {
   position: relative;
+  font-family: 'Oswald', sans-serif
+}
+
+#headerBlock {
+  color: white;
+  float: left;
 }
 
 #bio {
@@ -23,14 +40,37 @@ nav:hover ul {
 
 nav li {
   font-size: 1.4em;
-  margin-left: 5%;
-  margin-bottom: 1%;
+  background-color: #f5b52b;
+  border-bottom: thin solid white;
+  padding: 3% 10%;
+}
+
+nav a, nav a:visited {
+  color: #3e3a3a;
+}
+
+nav li:hover {
+  background-color: #ff8d0b;
 }
 
 #hamburger {
   font-size: 2em;
-  float: right;
-  margin: 8% 4%;
+  margin: 5% 0 8% 17%;
+  color: #f5b52b;
+}
+
+#hamburger:hover {
+  color: #ff8d0b;
+}
+
+#content {
+
+}
+
+.projectBlock {
+  margin: 10vh 1vh;
+  border: thin black solid;
+  text-align: center;
 }
 
 @media all and (min-width: 600px) {
