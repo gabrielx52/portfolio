@@ -6,7 +6,7 @@ h3 {
   position: absolute;
   left: 9.5em;
   top: 2.8em;
-  color: black;
+  color: #3e3a3a;
 }
 
 nav {
@@ -21,7 +21,6 @@ header {
 #headerBlock {
   color: white;
   float: left;
-  /*font-family: 'Oswald', sans-serif;*/
 }
 
 #bio {
@@ -41,15 +40,27 @@ nav:hover ul {
 
 nav li {
   font-size: 1.4em;
-  background-color: #d0d0d0;
-  border-bottom: thin solid black;
+  background-color: #f5b52b;
+  border-bottom: thin solid white;
   padding: 3% 10%;
+}
+
+nav a, nav a:visited {
+  color: #3e3a3a;
+}
+
+nav li:hover {
+  background-color: #ff8d0b;
 }
 
 #hamburger {
   font-size: 2em;
   margin: 5% 0 8% 17%;
   color: #f5b52b;
+}
+
+#hamburger:hover {
+  color: #ff8d0b;
 }
 
 #content {
