@@ -1,3 +1,7 @@
+h1 {
+  margin: 8% 0 8% 3%;
+}
+
 nav {
   display: block;
 }
@@ -23,14 +27,20 @@ nav:hover ul {
 
 nav li {
   font-size: 1.4em;
-  margin-left: 5%;
-  margin-bottom: 1%;
+  background-color: #d0d0d0;
+  border-bottom: thin solid black;
+  padding: 3% 10%;
 }
 
 #hamburger {
   font-size: 2em;
-  float: right;
   margin: 8% 4%;
+  margin: 8% 0 8% 10%;
+  color: white;
+}
+
+#content {
+
 }
 
 .projectBlock {

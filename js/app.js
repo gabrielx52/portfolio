@@ -25,10 +25,10 @@ Project.all = [];
 
 Project.initializeProjects = function(){
   projects.forEach(projObj => new Project(projObj.name, projObj.url, projObj.about, projObj.image));
-  listTasks();
+  listProjects();
 }
 
-function listTasks(){
+function listProjects(){
   Project.all.forEach(project => project.render());
 }
 

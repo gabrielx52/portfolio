@@ -48,26 +48,29 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-a {
+
+a, a:visited {
 	text-decoration: none;
+	color: white;
 }
+
 
 #template {
   display: none;
 }
 
-.clearfix {
+.clearfix::after {
+	content: "";
   clear: both;
 }
 
 header {
-
+  background-color: black;
 }
 
 h1 {
 	float: left;
-  font-family: 'Lora', serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 5vh;
-  margin-top: 5vh;
-  margin-bottom: 2vh;
+	color: white;
 }
