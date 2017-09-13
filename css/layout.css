@@ -33,6 +33,12 @@ nav li {
   margin: 8% 4%;
 }
 
+.projectBlock {
+  margin: 10vh 1vh;
+  border: thin black solid;
+  text-align: center;
+}
+
 @media all and (min-width: 600px) {
   #bio {
     width: 65vw;

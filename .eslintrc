@@ -1,5 +1,6 @@
 {
   "globals" : {
+    "projects": true,
     "rawData": true,
     "app": true,
     "Handlebars": true,
@@ -23,7 +24,6 @@
     "eqeqeq": ["error", "always"],
     "no-template-curly-in-string": "error",
     "no-console": "off",
-    "no-undef": "off",
     "no-undefined": "off",
     "indent": ["error", 2],
     "quotes": ["warn", "single", {"allowTemplateLiterals": true}],
