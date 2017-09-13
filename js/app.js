@@ -5,25 +5,27 @@ function Project(name, url, about, image) {
   this.url = url;
   this.about = about;
   this.image = image;
-  this.createAppend = function(elementType, parentNode, className) {
-    var node = parentNode.appendChild(document.createElement(elementType));
-    node.className = className;
-    return node;
-  };
-  this.render = function() {
-    var anchor = document.getElementById('projectSection');
-    var div = this.createAppend('div', anchor, 'projectBlock');
-    var a = this.createAppend('a', div, 'projectLink');
-    var img = this.createAppend('img', div, 'projectPic');
-    var p = this.createAppend('p', div, 'projectAbout');
-    a.setAttribute('href', this.url);
-    a.innerText = this.name;
-    img.src = this.image;
-    p.innerText = this.about;
-  }
-  this.render();
+  Project.all.push(this);
 }
 
-for (var i = 0; i < projects.length; i++) {
-  new Project(projects[i].name, projects[i].url, projects[i].about, projects[i].image)
+Project.prototype.render = function() {
+  var $template = $('template').clone();
+  $template.attr('id', '');
+  $template.find('a').attr('href', this.url);
+  $template.find('img').attr('src', this.image);
+  $template.find('p').text(this.about);
+  $('projectSection').append($template);
+};
+
+Project.all = [];
+
+Project.initializeTasks = function(){
+  projects.forEach(taskObj => new Project(taskObj.name, taskObj.url, taskObj.about, taskObj.image));
+  listTasks();
 }
+
+function listTasks(){
+  Project.all.forEach(task => task.render());
+}
+
+Project.initializeTasks();
