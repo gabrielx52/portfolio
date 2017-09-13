@@ -9,12 +9,12 @@ function Project(name, url, about, image) {
 }
 
 Project.prototype.render = function() {
-  var $template = $('template').clone();
+  var $template = $('#template').clone();
   $template.attr('id', '');
   $template.find('a').attr('href', this.url);
   $template.find('img').attr('src', this.image);
   $template.find('p').text(this.about);
-  $('projectSection').append($template);
+  $('#projectSection').append($template);
 };
 
 Project.all = [];
