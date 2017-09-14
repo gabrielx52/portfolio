@@ -1,5 +1,5 @@
 h1 {
-  margin: 8% 0 8% 6%;
+  margin: 18% 0 8% 16%;
 }
 
 h3 {
@@ -10,7 +10,7 @@ h3 {
 }
 
 nav {
-  display: block;
+  /*display: block;*/
 }
 
 header {
@@ -23,9 +23,24 @@ header {
   float: left;
 }
 
+#aboutBlock {
+  position: relative;
+}
+
 #bio {
-  width:60vw;
-  margin: 0 20vw;
+  position: absolute;
+  width: 15em;
+  bottom: 5em;
+  left: 3em;
+}
+
+#aboutTitle {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  font-weight: 500;
+  font-size: 4em;
+  top: 0.9em;
+  left: 1.2em;
 }
 
 nav ul {
@@ -55,7 +70,7 @@ nav li:hover {
 
 #hamburger {
   font-size: 2em;
-  margin: 5% 0 8% 17%;
+  margin: 5% 0 8% 55%;
   color: #f5b52b;
 }
 
@@ -76,9 +91,13 @@ nav li:hover {
   border: thin black solid;
   text-align: center;
 }
-
 #cardPhoto {
   position: relative;
+}
+
+.hide {
+ display: none;
+ clear: both;
 }
 
 @media all and (min-width: 600px) {
@@ -90,15 +109,18 @@ nav li:hover {
     display: none;
   }
   nav ul {
-    display: inline;
+    display: block;
   }
   nav li {
+    display: block;
     float: left;
+    width: 25%;
   }
-}
-
-@media all and (min-width: 800px) {
-  #bio {
-    width: 75vw;
+  .tab:hover {
+    background-color: red;
+  }
+  header {
+    width: 100%;
+    height: 5em;
   }
 }

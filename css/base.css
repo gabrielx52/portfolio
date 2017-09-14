@@ -61,7 +61,7 @@ a, a:visited {
 }
 
 .clearfix::after {
-	content: "";
+	/*content: "";*/
   clear: both;
 }
 

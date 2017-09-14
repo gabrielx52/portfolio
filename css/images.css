@@ -4,6 +4,12 @@
   box-shadow: 6px 6px 11px #888888;
 }
 
+#cardBack {
+  width:18.5em;
+  margin: 8% 5%;
+  box-shadow: 6px 6px 11px #888888;
+}
+
 .projectPic {
   width:80vw;
   margin: 0 10vw;

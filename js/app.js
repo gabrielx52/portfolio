@@ -24,11 +24,13 @@ Project.initializeProjects = function(){
   listProjects();
 }
 
+$('.aboutTab').on('click', function() {
+  $('#aboutBlock').toggle('.hide');
+  $('#cardPhoto').toggle('.hide');
+})
+
 function listProjects(){
   Project.all.forEach(project => project.render());
 }
 
 Project.initializeProjects();
-
-var gnar = new Project('new','#','about', 'http://fillmurray.com/100/100');
-gnar.render();
