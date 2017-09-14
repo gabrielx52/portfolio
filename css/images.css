@@ -1,6 +1,7 @@
 #headShot {
-  width:80vw;
-  margin: 8% 10vw;
+  width:90%;
+  margin: 8% 5%;
+  box-shadow: 6px 6px 11px #888888;
 }
 
 .projectPic {
