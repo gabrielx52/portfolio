@@ -60,8 +60,7 @@ a, a:visited {
   display: none;
 }
 
-.clearfix::after {
-	/*content: "";*/
+.clearfix {
   clear: both;
 }
 

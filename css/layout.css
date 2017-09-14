@@ -9,10 +9,6 @@ h3 {
   color: #3e3a3a;
 }
 
-nav {
-  /*display: block;*/
-}
-
 header {
   position: relative;
   font-family: 'Oswald', sans-serif
@@ -91,14 +87,6 @@ nav li:hover {
   border: thin black solid;
   text-align: center;
 }
-#cardPhoto {
-  position: relative;
-}
-
-.hide {
- display: none;
- clear: both;
-}
 
 @media all and (min-width: 600px) {
   #bio {
@@ -115,9 +103,8 @@ nav li:hover {
     display: block;
     float: left;
     width: 25%;
-  }
-  .tab:hover {
-    background-color: red;
+    padding-top: 1%;
+    padding-bottom: 1%;
   }
   header {
     width: 100%;

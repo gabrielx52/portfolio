@@ -24,13 +24,20 @@ Project.initializeProjects = function(){
   listProjects();
 }
 
-$('.aboutTab').on('click', function() {
-  $('#aboutBlock').toggle('.hide');
-  $('#cardPhoto').toggle('.hide');
-})
+var navHandler = function(){
+  $('article').hide();
+  $('#homeBlock').show();
+  $('.tab').on('click', function(){
+    $('article').hide();
+    $('article[id="'+$(this).attr('data-content')+'"]').show();
+  })
+}
+
+// $('article[data-author="'+$(this).val()+'"]').show();
 
 function listProjects(){
   Project.all.forEach(project => project.render());
 }
 
 Project.initializeProjects();
+navHandler();

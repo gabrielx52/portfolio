@@ -2,6 +2,7 @@
   width:90%;
   margin: 8% 5%;
   box-shadow: 6px 6px 11px #888888;
+  position: relative;
 }
 
 #cardBack {
