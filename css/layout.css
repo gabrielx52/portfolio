@@ -1,5 +1,9 @@
 h1 {
-  margin: 8% 0 8% 6%;
+  /*margin: 18% 0 8% 16%;*/
+  z-index: 11;
+  margin: 0.8em 0 1.5em 0.6em;
+  transform: rotate(-14deg);
+  color: red;
 }
 
 h3 {
@@ -9,13 +13,10 @@ h3 {
   color: #3e3a3a;
 }
 
-nav {
-  display: block;
-}
-
 header {
   position: relative;
-  font-family: 'Oswald', sans-serif
+  font-family: 'Oswald', sans-serif;
+  z-index: 2;
 }
 
 #headerBlock {
@@ -23,9 +24,24 @@ header {
   float: left;
 }
 
+#aboutBlock {
+  position: relative;
+}
+
 #bio {
-  width:60vw;
-  margin: 0 20vw;
+  position: absolute;
+  width: 15em;
+  bottom: 5em;
+  left: 3em;
+}
+
+#aboutTitle {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  font-weight: 500;
+  font-size: 4em;
+  top: 0.9em;
+  left: 1.2em;
 }
 
 nav ul {
@@ -53,10 +69,23 @@ nav li:hover {
   background-color: #ff8d0b;
 }
 
+#yellowBox {
+  float: left;
+  z-index: -1;
+  width: 7.5em;
+  height: 3em;
+  position: absolute;
+  background-color: yellow;
+  top: 0.98em;
+  left: 0.5em;
+  transform: rotate(-14deg);
+}
+
 #hamburger {
   font-size: 2em;
-  margin: 5% 0 8% 17%;
+  /*margin: 5% 0 8% 55%;*/
   color: #f5b52b;
+  margin: 1em 0 0.5em 5em;
 }
 
 #hamburger:hover {
@@ -67,18 +96,10 @@ nav li:hover {
 
 }
 
-.yellowLetter {
-  color: rgb(243, 255, 78);
-}
-
 .projectBlock {
   margin: 10vh 1vh;
   border: thin black solid;
   text-align: center;
-}
-
-#cardPhoto {
-  position: relative;
 }
 
 @media all and (min-width: 600px) {
@@ -90,15 +111,17 @@ nav li:hover {
     display: none;
   }
   nav ul {
-    display: inline;
+    display: block;
   }
   nav li {
+    display: block;
     float: left;
+    width: 25%;
+    padding-top: 1%;
+    padding-bottom: 1%;
   }
-}
-
-@media all and (min-width: 800px) {
-  #bio {
-    width: 75vw;
+  header {
+    width: 100%;
+    height: 5em;
   }
 }

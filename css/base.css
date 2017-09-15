@@ -60,13 +60,13 @@ a, a:visited {
   display: none;
 }
 
-.clearfix::after {
-	content: "";
+.clearfix {
   clear: both;
 }
 
 header {
-  background-color: #7594e4;
+  /*background-color: #7594e4;*/
+	background-color: #fc4949;
 }
 
 h1 {

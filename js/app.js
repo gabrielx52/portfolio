@@ -24,11 +24,20 @@ Project.initializeProjects = function(){
   listProjects();
 }
 
+var navHandler = function(){
+  $('article').hide();
+  $('#homeBlock').show();
+  $('.tab').on('click', function(){
+    $('article').hide();
+    $('article[id="'+$(this).attr('data-content')+'"]').show();
+  })
+}
+
+// $('article[data-author="'+$(this).val()+'"]').show();
+
 function listProjects(){
   Project.all.forEach(project => project.render());
 }
 
 Project.initializeProjects();
-
-var gnar = new Project('new','#','about', 'http://fillmurray.com/100/100');
-gnar.render();
+navHandler();
