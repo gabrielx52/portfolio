@@ -10,16 +10,14 @@ function Project(name, url, about, image) {
 
 
 Project.prototype.toHtml = function() {
-  var sourceHtml = $('#article-template').html();
-  var projectTemplate = Handlebars.compile(sourceHtml);
+  var projectTemplate = Handlebars.compile($('#article-template').html());
   var context = {
     name: this.name,
     url: this.url,
     about: this.about,
     image: this.image
   }
-  var returnHtml = projectTemplate(context);
-  return returnHtml;
+  return projectTemplate(context);
 }
 
 Project.all = [];
