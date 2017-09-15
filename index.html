@@ -12,13 +12,17 @@
 
 
     <script id="article-template" type="text/x-handlebars-template">
-      <a href="{{ url }}" class="projectLink">
-        <div class="projectBlock">
-          <h2>{{ name }}</h2>
-          <img src="{{ image }}" alt="" class="projectPic" />
-          <p class="projectAbout">{{ about }}</p>
+        <div class="projectBlock projectCard">
+          <a href="{{ url }}" class="projectLink">
+          <div class="projectHeader">
+            <h2>{{ name }}</h2>
+          </a>
+          </div>
+          <div class="projectAbout">
+            <img src="{{ image }}" alt="" class="projectPic" />
+            <p class="projectAbout">{{ about }}</p>
+          </div>
         </div>
-      </a>
     </script>
 
 

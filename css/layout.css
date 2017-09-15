@@ -95,9 +95,7 @@ nav li:hover {
 }
 
 .projectBlock {
-  margin: 10vh 1vh;
-  border: thin black solid;
-  text-align: center;
+
 }
 
 @media all and (min-width: 600px) {
