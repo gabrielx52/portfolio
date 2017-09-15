@@ -1,5 +1,9 @@
 h1 {
-  margin: 18% 0 8% 16%;
+  /*margin: 18% 0 8% 16%;*/
+  z-index: 11;
+  margin: 0.8em 0 1.5em 0.6em;
+  transform: rotate(-14deg);
+  color: red;
 }
 
 h3 {
@@ -11,7 +15,8 @@ h3 {
 
 header {
   position: relative;
-  font-family: 'Oswald', sans-serif
+  font-family: 'Oswald', sans-serif;
+  z-index: 2;
 }
 
 #headerBlock {
@@ -64,10 +69,23 @@ nav li:hover {
   background-color: #ff8d0b;
 }
 
+#yellowBox {
+  float: left;
+  z-index: -1;
+  width: 7.5em;
+  height: 3em;
+  position: absolute;
+  background-color: yellow;
+  top: 0.98em;
+  left: 0.5em;
+  transform: rotate(-14deg);
+}
+
 #hamburger {
   font-size: 2em;
-  margin: 5% 0 8% 55%;
+  /*margin: 5% 0 8% 55%;*/
   color: #f5b52b;
+  margin: 1em 0 0.5em 5em;
 }
 
 #hamburger:hover {
@@ -76,10 +94,6 @@ nav li:hover {
 
 #content {
 
-}
-
-.yellowLetter {
-  color: rgb(243, 255, 78);
 }
 
 .projectBlock {

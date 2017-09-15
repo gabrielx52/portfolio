@@ -65,7 +65,8 @@ a, a:visited {
 }
 
 header {
-  background-color: #7594e4;
+  /*background-color: #7594e4;*/
+	background-color: #fc4949;
 }
 
 h1 {
