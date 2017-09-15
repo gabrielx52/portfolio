@@ -9,6 +9,19 @@
     <script src="https://use.fontawesome.com/86db0bfdd3.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Gabriel Meringolo</title>
+
+
+    <script id="article-template" type="text/x-handlebars-template">
+      <a href="{{ url }}" class="projectLink">
+        <div class="projectBlock">
+          <h2>{{ name }}</h2>
+          <img src="{{ image }}" alt="" class="projectPic" />
+          <p class="projectAbout">{{ about }}</p>
+        </div>
+      </a>
+    </script>
+
+
   </head>
   <body>
     <header>
@@ -58,6 +71,7 @@
       <a href="https://github.com/gabrielx52"><i class="fa fa-github-square" aria-hidden="true"></i></a>
     </footer>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="data/projects.js" charset="utf-8"></script>
   <script src="js/app.js" charset="utf-8"></script>
 </html>
