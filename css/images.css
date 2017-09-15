@@ -1,12 +1,12 @@
 #headShot {
-  width:90%;
+  width:18em;
   margin: 8% 5%;
   box-shadow: 6px 6px 11px #888888;
   position: relative;
 }
 
 #cardBack {
-  width:18.5em;
+  width:18em;
   margin: 8% 5%;
   box-shadow: 6px 6px 11px #888888;
 }
@@ -18,7 +18,7 @@
 
 @media all and (min-width: 600px) {
   #headShot {
-    width: 15vw;
+    width: 25em;
   }
   .projectPic {
     width: 15vw;

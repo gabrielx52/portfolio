@@ -29,11 +29,9 @@ var navHandler = function(){
   $('#homeBlock').show();
   $('.tab').on('click', function(){
     $('article').hide();
-    $('article[id="'+$(this).attr('data-content')+'"]').show();
+    $('#' + $(this).attr('data-content')).show();
   })
 }
-
-// $('article[data-author="'+$(this).val()+'"]').show();
 
 function listProjects(){
   Project.all.forEach(project => project.render());
