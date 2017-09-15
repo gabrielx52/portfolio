@@ -54,6 +54,7 @@ table {
 a, a:visited {
 	text-decoration: none;
 	color: #3e3a3a;
+	cursor: pointer;
 }
 
 
