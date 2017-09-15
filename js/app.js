@@ -8,14 +8,19 @@ function Project(name, url, about, image) {
   Project.all.push(this);
 }
 
-Project.prototype.render = function() {
-  var $template = $('#template').clone();
-  $template.find('h2').text(this.name);
-  $template.attr('id', '').attr('href', this.url);
-  $template.find('img').attr('src', this.image);
-  $template.find('p').text(this.about);
-  $('#projectSection').prepend($template);
-};
+
+Project.prototype.toHtml = function() {
+  var sourceHtml = $('#article-template').html();
+  var projectTemplate = Handlebars.compile(sourceHtml);
+  var context = {
+    name: this.name,
+    url: this.url,
+    about: this.about,
+    image: this.image
+  }
+  var returnHtml = projectTemplate(context);
+  return returnHtml;
+}
 
 Project.all = [];
 
@@ -34,7 +39,7 @@ var navHandler = function(){
 }
 
 function listProjects(){
-  Project.all.forEach(project => project.render());
+  Project.all.forEach(project => $('#projectSection').prepend(project.toHtml()));
 }
 
 Project.initializeProjects();
