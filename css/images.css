@@ -12,9 +12,9 @@
 }
 
 .projectAbout {
+  position: relative;
   width: 88%;
   margin: 0 6% 2.5em;
-  border-radius: 25px;
   padding: 0.2em;
   background-color: white;
   border: 1.5px #655e5e solid;
@@ -22,7 +22,6 @@
 
 .projectPic {
   width: 100%;
-  border-radius: 25px;
   background-color: white;
 }
 
@@ -36,6 +35,7 @@
 
 .projectHeader {
   font-family: 'Oswald', sans-serif;
+  font-weight: 500;
   position: relative;
   width: 7.5em;
   font-size: 2.2em;
@@ -53,8 +53,18 @@
 
 }
 
+.projectAbout:hover {
+}
+
 .projectAbout:hover .projectPic{
-  /*display: none;*/
+  opacity: 0;
+}
+
+.projectAbout:hover  .projectBio {
+  display: inline;
+  position: absolute;
+  top: 0.5em;
+  left: 1em;
 }
 
 @media all and (min-width: 600px) {
