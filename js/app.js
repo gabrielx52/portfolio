@@ -8,14 +8,11 @@ function Project(name, url, about, image) {
   Project.all.push(this);
 }
 
-Project.prototype.render = function() {
-  var $template = $('#template').clone();
-  $template.find('h2').text(this.name);
-  $template.attr('id', '').attr('href', this.url);
-  $template.find('img').attr('src', this.image);
-  $template.find('p').text(this.about);
-  $('#projectSection').prepend($template);
-};
+
+Project.prototype.toHtml = function() {
+  var projectTemplate = Handlebars.compile($('#article-template').html());
+  return projectTemplate(this);
+}
 
 Project.all = [];
 
@@ -29,14 +26,12 @@ var navHandler = function(){
   $('#homeBlock').show();
   $('.tab').on('click', function(){
     $('article').hide();
-    $('article[id="'+$(this).attr('data-content')+'"]').show();
+    $('#' + $(this).attr('data-content')).show();
   })
 }
 
-// $('article[data-author="'+$(this).val()+'"]').show();
-
 function listProjects(){
-  Project.all.forEach(project => project.render());
+  Project.all.forEach(project => $('#projectSection').prepend(project.toHtml()));
 }
 
 Project.initializeProjects();

@@ -1,26 +1,81 @@
 #headShot {
-  width:90%;
+  width:18em;
   margin: 8% 5%;
   box-shadow: 6px 6px 11px #888888;
   position: relative;
 }
 
 #cardBack {
-  width:18.5em;
+  width:18em;
   margin: 8% 5%;
   box-shadow: 6px 6px 11px #888888;
 }
 
+.cardBackAbout {
+  position: relative;
+  width: 88%;
+  margin: 0 6% 2.5em;
+  padding: 0.2em;
+  background-color: white;
+  border: 1.5px #655e5e solid;
+}
+
 .projectPic {
-  width:80vw;
-  margin: 0 10vw;
+  width: 100%;
+  background-color: white;
+}
+
+.cardBack {
+  overflow: auto;
+  background-color: rgb(132, 165, 247);
+  width:18em;
+  margin: 8% 5%;
+  box-shadow: 6px 6px 11px #888888;
+}
+
+#aboutCardBack {
+  background-color: #decf7e; 
+}
+
+.backHeader {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  position: relative;
+  width: 7.5em;
+  font-size: 2.2em;
+  background-color: white;
+  margin: 1em auto;
+  text-align: center;
+  border: 1.5px #655e5e solid;
+  border-radius: 25px;
+  padding-top: 0.4em;
+  height: 2em;
+}
+
+.projectBio {
+  display: none;
+
+}
+
+.cardBackAbout:hover {
+}
+
+.cardBackAbout:hover .projectPic{
+  opacity: 0;
+}
+
+.cardBackAbout:hover  .projectBio {
+  display: inline;
+  position: absolute;
+  top: 0.5em;
+  left: 1em;
 }
 
 @media all and (min-width: 600px) {
   #headShot {
-    width: 15vw;
+    width: 25em;
   }
   .projectPic {
-    width: 15vw;
+
   }
 }

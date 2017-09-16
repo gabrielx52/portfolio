@@ -9,11 +9,28 @@
     <script src="https://use.fontawesome.com/86db0bfdd3.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Gabriel Meringolo</title>
+
+
+    <script id="article-template" type="text/x-handlebars-template">
+        <div class="cardBack">
+            <div class="backHeader">
+              <a href="{{ url }}" class="projectLink">
+                <h2>{{ name }}</h2>
+              </a>
+            </div>
+          <div class="cardBackAbout">
+            <img src="{{ image }}" alt="" class="projectPic" />
+            <p class="projectBio">{{ about }}</p>
+          </div>
+        </div>
+    </script>
+
+
   </head>
   <body>
     <header>
       <section id="headerBlock">
-        <div class="yellowBox"></div>
+        <div id="yellowBox"></div>
         <h1><span class="yellowLetter">H</span>I<span class="yellowLetter">R</span>E <span class="yellowLetter">M</span>E<span class="yellowLetter">!</span></h1>
       </section>
       <nav>
@@ -35,22 +52,21 @@
       </article>
 
       <article id="aboutBlock">
-          <h2 id="aboutTitle">ABOUT</h2>
-          <img src="imgs/cardBack.png" alt="" id="cardBack"/>
-          <p id="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="cardBack" id="aboutCardBack">
+          <div class="backHeader">
+            <h2>ABOUT ME</h2>
+          </div>
+          <div class="cardBackAbout">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
       </article>
 
+
       <article id="portfolioBlock">
-      <section id="projectSection">
-        <a id="template" href="#" class="projectLink">
-          <div class="projectBlock">
-            <h2></h2>
-            <img src="" alt="" class="projectPic" />
-            <p class="projectAbout"></p>
-          </div>
-        </a>
-      </section>
-    </article>
+        <section id="projectSection">
+        </section>
+      </article>
 
     </section>
     <footer>
@@ -58,6 +74,7 @@
       <a href="https://github.com/gabrielx52"><i class="fa fa-github-square" aria-hidden="true"></i></a>
     </footer>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="data/projects.js" charset="utf-8"></script>
   <script src="js/app.js" charset="utf-8"></script>
 </html>
