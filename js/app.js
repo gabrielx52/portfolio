@@ -11,13 +11,7 @@ function Project(name, url, about, image) {
 
 Project.prototype.toHtml = function() {
   var projectTemplate = Handlebars.compile($('#article-template').html());
-  var context = {
-    name: this.name,
-    url: this.url,
-    about: this.about,
-    image: this.image
-  }
-  return projectTemplate(context);
+  return projectTemplate(this);
 }
 
 Project.all = [];
