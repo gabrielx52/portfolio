@@ -25,6 +25,7 @@ var navHandler = function(){
   $('article').hide();
   $('#homeBlock').show();
   $('.tab').on('click', function(){
+    $('ul').hide();
     $('article').hide();
     $('#' + $(this).attr('data-content')).show();
   })
@@ -33,6 +34,10 @@ var navHandler = function(){
 function listProjects(){
   Project.all.forEach(project => $('#projectSection').prepend(project.toHtml()));
 }
+
+$('#hamburger').on('click', function(){
+  $('ul').show();
+})
 
 Project.initializeProjects();
 navHandler();
