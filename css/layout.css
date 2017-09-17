@@ -49,8 +49,8 @@ nav ul {
 }
 
 nav:hover ul {
-  /*display: block;
-  clear: both;*/
+  display: block;
+  clear: both;
 }
 
 nav li {
