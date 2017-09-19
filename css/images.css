@@ -31,10 +31,11 @@
   width:18em;
   margin: 8% 5%;
   box-shadow: 6px 6px 11px #888888;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23737e34' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 #aboutCardBack {
-  background-color: #decf7e; 
+  background-color: #decf7e;
 }
 
 .backHeader {
@@ -77,5 +78,8 @@
   }
   .projectPic {
 
+  }
+  nav ul {
+    display: block;
   }
 }
