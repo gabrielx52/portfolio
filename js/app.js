@@ -1,10 +1,10 @@
 'use strict';
 
-function Project(name, url, about, image, color) {
-  this.name = name;
-  this.url = url;
-  this.about = about;
-  this.image = image;
+function Project(rawDataObj) {
+  this.name = rawDataObj.name;
+  this.url = rawDataObj.url;
+  this.about = rawDataObj.about;
+  this.image = rawDataObj.image;
   Project.all.push(this);
 }
 
