@@ -5,10 +5,21 @@ function Project(name, url, about, image, color) {
   this.url = url;
   this.about = about;
   this.image = image;
-  this.color = color;
   Project.all.push(this);
 }
 
+
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    Project.initializeProjects(JSON.parse(localStorage.rawData));
+  } else {
+    $.get('data/projects.json', function(response) {
+      localStorage.setItem('rawData', JSON.stringify(response))
+      Project.initializeProjects(response);
+    })
+
+  }
+}
 
 Project.prototype.toHtml = function() {
   var projectTemplate = Handlebars.compile($('#article-template').html());
@@ -17,8 +28,8 @@ Project.prototype.toHtml = function() {
 
 Project.all = [];
 
-Project.initializeProjects = function(){
-  projects.forEach(projObj => new Project(projObj.name, projObj.url, projObj.about, projObj.image, colorPicker()));
+Project.initializeProjects = function(rawData){
+  rawData.forEach(element => new Project(element))
   listProjects();
 }
 
@@ -44,5 +55,5 @@ $('#hamburger').on('click', function(){
   $('ul').show();
 })
 
-Project.initializeProjects();
+Project.fetchAll();
 navHandler();
