@@ -10,6 +10,7 @@ function Project(rawDataObj) {
 
 
 Project.fetchAll = function() {
+  navHandler();
   if (localStorage.rawData) {
     Project.initializeProjects(JSON.parse(localStorage.rawData));
   } else {
@@ -54,6 +55,3 @@ function colorPicker(){
 $('#hamburger').on('click', function(){
   $('ul').show();
 })
-
-Project.fetchAll();
-navHandler();
