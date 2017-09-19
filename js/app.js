@@ -26,7 +26,6 @@ var navHandler = function(){
   $('article').hide();
   $('#homeBlock').show();
   $('.tab').on('click', function(){
-    // $('ul').hide();
     $('article').hide();
     $('#' + $(this).attr('data-content')).show();
   })
