@@ -1,14 +1,25 @@
 'use strict';
 
-function Project(name, url, about, image, color) {
-  this.name = name;
-  this.url = url;
-  this.about = about;
-  this.image = image;
-  this.color = color;
+function Project(rawDataObj) {
+  this.name = rawDataObj.name;
+  this.url = rawDataObj.url;
+  this.about = rawDataObj.about;
+  this.image = rawDataObj.image;
   Project.all.push(this);
 }
 
+
+Project.fetchAll = function() {
+  navHandler();
+  if (localStorage.rawData) {
+    Project.initializeProjects(JSON.parse(localStorage.rawData));
+  } else {
+    $.get('data/projects.json', function(response) {
+      localStorage.setItem('rawData', JSON.stringify(response))
+      Project.initializeProjects(response);
+    })
+  }
+}
 
 Project.prototype.toHtml = function() {
   var projectTemplate = Handlebars.compile($('#article-template').html());
@@ -17,8 +28,8 @@ Project.prototype.toHtml = function() {
 
 Project.all = [];
 
-Project.initializeProjects = function(){
-  projects.forEach(projObj => new Project(projObj.name, projObj.url, projObj.about, projObj.image, colorPicker()));
+Project.initializeProjects = function(rawData){
+  rawData.forEach(element => new Project(element))
   listProjects();
 }
 
@@ -26,7 +37,6 @@ var navHandler = function(){
   $('article').hide();
   $('#homeBlock').show();
   $('.tab').on('click', function(){
-    // $('ul').hide();
     $('article').hide();
     $('#' + $(this).attr('data-content')).show();
   })
@@ -44,6 +54,3 @@ function colorPicker(){
 $('#hamburger').on('click', function(){
   $('ul').show();
 })
-
-Project.initializeProjects();
-navHandler();
