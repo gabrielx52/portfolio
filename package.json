@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio web app for Code 301",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielx52/portfolio.git"
+  },
+  "author": "Gabriel Meringolo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielx52/portfolio/issues"
+  },
+  "homepage": "https://github.com/gabrielx52/portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
+}
