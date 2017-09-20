@@ -18,7 +18,6 @@ Project.fetchAll = function() {
       localStorage.setItem('rawData', JSON.stringify(response))
       Project.initializeProjects(response);
     })
-
   }
 }
 
