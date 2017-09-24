@@ -29,7 +29,7 @@ Project.prototype.toHtml = function() {
 Project.all = [];
 
 Project.initializeProjects = function(rawData){
-  rawData.forEach(element => new Project(element))
+  rawData.map(element => new Project(element))
   listProjects();
 }
 
