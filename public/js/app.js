@@ -1,6 +1,6 @@
 'use strict';
 
-const APP = {};
+let app = {};
 
 (function(module){
   function Project(rawDataObj) {
@@ -14,18 +14,16 @@ const APP = {};
 
   Project.fetchAll = function() {
     navHandler();
-    if (localStorage.rawData) {
-      Project.initializeProjects(JSON.parse(localStorage.rawData));
-    } else {
+    localStorage.rawData ?
+      Project.initializeProjects(JSON.parse(localStorage.rawData)) :
       $.get('data/projects.json', function(response) {
         localStorage.setItem('rawData', JSON.stringify(response))
         Project.initializeProjects(response);
       })
-    }
   }
 
   Project.prototype.toHtml = function() {
-    var projectTemplate = Handlebars.compile($('#article-template').html());
+    let projectTemplate = Handlebars.compile($('#article-template').html());
     return projectTemplate(this);
   }
 
@@ -37,15 +35,13 @@ const APP = {};
   }
 
   function colorPicker(){
-    var colors = ['#f58b71', '#e6b25d', '#519d9d', '#9c9746'];
+    let colors = ['#f58b71', '#e6b25d', '#519d9d', '#9c9746'];
     return colors[Math.round(Math.random() * (colors.length - 1) + 1)];
   }
 
-  $('#hamburger').on('click', function(){
-    $('ul').show();
-  })
 
-  var navHandler = function(){
+  function navHandler(){
+    $('#hamburger').on('click', () => { $('ul').show() });
     $('article').hide();
     $('#homeBlock').show();
     $('.tab').on('click', function(){
@@ -55,10 +51,8 @@ const APP = {};
     })
   }
 
-
-
   function listProjects(){
     Project.all.forEach(project => $('#projectSection').prepend(project.toHtml()));
   }
   module.Project = Project;
-})(APP)
+})(app)
