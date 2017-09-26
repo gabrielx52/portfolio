@@ -1,6 +1,6 @@
 'use strict';
 
-let app = {};
+var app = app || {};
 
 (function(module){
   function Project(rawDataObj) {
