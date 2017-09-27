@@ -6,7 +6,6 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.displayAbout = function() {
-    app.Project.fetchAll();
     $('#homeBlock').hide();
     $('#aboutBlock').show();
   }

@@ -40,16 +40,16 @@ var app = app || {};
   }
 
 
-  function navHandler(){
-    $('#hamburger').on('click', () => { $('ul').show() });
-    $('article').hide();
-    $('#homeBlock').show();
-    $('.tab').on('click', function(){
-      $('article').hide();
-      $('ul').hide();
-      $('#' + $(this).attr('data-content')).show();
-    })
-  }
+  // function navHandler(){
+  //   $('#hamburger').on('click', () => { $('ul').show() });
+  //   $('article').hide();
+  //   $('#homeBlock').show();
+  //   $('.tab').on('click', function(){
+  //     $('article').hide();
+  //     $('ul').hide();
+  //     $('#' + $(this).attr('data-content')).show();
+  //   })
+  // }
 
   function listProjects(){
     Project.all.forEach(project => $('#projectSection').prepend(project.toHtml()));
