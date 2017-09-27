@@ -1,6 +1,6 @@
 'use strict';
 
-let app = {};
+var app = app || {};
 
 (function(module){
   function Project(rawDataObj) {
@@ -13,7 +13,6 @@ let app = {};
 
 
   Project.fetchAll = function() {
-    navHandler();
     localStorage.rawData ?
       Project.initializeProjects(JSON.parse(localStorage.rawData)) :
       $.get('data/projects.json', function(response) {
@@ -37,18 +36,6 @@ let app = {};
   function colorPicker(){
     let colors = ['#f58b71', '#e6b25d', '#519d9d', '#9c9746'];
     return colors[Math.round(Math.random() * (colors.length - 1) + 1)];
-  }
-
-
-  function navHandler(){
-    $('#hamburger').on('click', () => { $('ul').show() });
-    $('article').hide();
-    $('#homeBlock').show();
-    $('.tab').on('click', function(){
-      $('article').hide();
-      $('ul').hide();
-      $('#' + $(this).attr('data-content')).show();
-    })
   }
 
   function listProjects(){

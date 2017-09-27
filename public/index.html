@@ -32,10 +32,10 @@
       <nav>
         <i id="hamburger" class="fa fa-bars" aria-hidden="true"></i>
         <ul>
-          <li class="tab" data-content="homeBlock"><a href="#">Home</a></li>
-          <li class="tab" data-content="aboutBlock"><a href="#">About</a></li>
-          <li class="tab" data-content="portfolioBlock"><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <a href="/"><li class="tab" data-content="homeBlock">Home</li></a>
+          <a href="/about"><li class="tab" data-content="aboutBlock">About</li></a>
+          <a href="/projects"><li class="tab" data-content="portfolioBlock">Projects</li></a>
+          <a href="#"><li>Contact</li></a>
         </ul>
       </nav>
     </header>
@@ -64,9 +64,11 @@
       <a href="https://github.com/gabrielx52"><i class="fa fa-github-square" aria-hidden="true"></i></a>
     </footer>
   </body>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-  <script src="js/app.js" charset="utf-8"></script>
-  <script>
-    app.Project.fetchAll();
-  </script>
+  <script src="/scripts/models/app.js" charset="utf-8"></script>
+  <script src="/scripts/controllers/homeController.js"></script>
+  <script src="/scripts/controllers/aboutController.js"></script>
+  <script src="/scripts/controllers/projectController.js"></script>
+  <script src="/scripts/controllers/routes.js"></script>
 </html>
