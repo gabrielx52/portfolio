@@ -6,7 +6,7 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.displayAbout = function() {
-    $('#homeBlock').hide();
+    $('article').hide();
     $('#aboutBlock').show();
   }
   module.aboutController = aboutController;

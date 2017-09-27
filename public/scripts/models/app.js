@@ -13,7 +13,6 @@ var app = app || {};
 
 
   Project.fetchAll = function() {
-    navHandler();
     localStorage.rawData ?
       Project.initializeProjects(JSON.parse(localStorage.rawData)) :
       $.get('data/projects.json', function(response) {
@@ -38,18 +37,6 @@ var app = app || {};
     let colors = ['#f58b71', '#e6b25d', '#519d9d', '#9c9746'];
     return colors[Math.round(Math.random() * (colors.length - 1) + 1)];
   }
-
-
-  // function navHandler(){
-  //   $('#hamburger').on('click', () => { $('ul').show() });
-  //   $('article').hide();
-  //   $('#homeBlock').show();
-  //   $('.tab').on('click', function(){
-  //     $('article').hide();
-  //     $('ul').hide();
-  //     $('#' + $(this).attr('data-content')).show();
-  //   })
-  // }
 
   function listProjects(){
     Project.all.forEach(project => $('#projectSection').prepend(project.toHtml()));
