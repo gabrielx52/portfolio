@@ -72,9 +72,50 @@
   left: 1em;
 }
 
+#aboutCardBackLarge {
+  display: none;
+}
+
 @media all and (min-width: 600px) {
+  #headerBlock {
+    margin-bottom: -3.5em;
+  }
+
+  #aboutCardBackLarge {
+    display: block;
+  }
+
+  #backHeaderLarge {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    position: relative;
+    width: 90%;
+    font-size: 2.2em;
+    background-color: white;
+    margin: 1em auto;
+    text-align: center;
+    border: 1.5px #655e5e solid;
+    border-radius: 25px;
+    padding-top: 0.4em;
+    height: 2em;
+  }
+
+  #cardBackAboutLarge {
+    font-size: 1.2em;
+    position: relative;
+    width: 88%;
+    height: 12em;
+    margin: 0 6% 1.5em;
+    padding: 0.2em;
+    background-color: white;
+    border: 1.5px #655e5e solid;
+  }
+
+
   #headShot {
+    z-index: 100;
     width: 25em;
+    margin-left: 21em;
   }
   .projectPic {
 
