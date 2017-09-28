@@ -112,13 +112,16 @@ nav li:hover {
   }
   nav ul {
     display: block;
+    width: 101%;
   }
   nav li {
     display: block;
     float: left;
-    width: 25%;
+    width: 33%;
     padding-top: 1%;
     padding-bottom: 1%;
+    text-align: center;
+    border: none;
   }
   header {
     width: 100%;
