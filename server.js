@@ -1,7 +1,7 @@
 'use strict';
 
 const EXPRESS = require('express');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const APP = EXPRESS();
 const REQUEST_PROXY = require('express-request-proxy');
 
