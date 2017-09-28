@@ -8,6 +8,7 @@ var app = app || {};
   app.Project.fetchAll();
   projectController.displayProjects = function() {
     $('article').hide();
+    $('#aboutBlockLarge').hide();
     $('#portfolioBlock').show();
   }
   module.projectController = projectController;

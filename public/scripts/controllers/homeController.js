@@ -8,6 +8,7 @@ var app = app || {};
   homeController.displayHome = function() {
     $('article').hide();
     $('#homeBlock').show();
+    $('#aboutBlockLarge').show();
   }
   module.homeController = homeController;
 })(app);
